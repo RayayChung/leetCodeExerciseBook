@@ -13,6 +13,7 @@
 // 进阶:
 //你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
 // Related Topics 链表
+
 public class ReverseLinkedList {
 
     /**
@@ -40,7 +41,7 @@ public class ReverseLinkedList {
     /**
      * 递归
      *
-     * 假设后面的都已经拍好，head.next.next = head，其实是说排序好的最后一个(为啥要用head.next.next-最后要返回的是原来的end对应的Node)
+     * 假设后面的都已经排序好，head.next.next = head，其实是说排序好的最后一个(为啥要用head.next.next-最后要返回的是原来的end对应的Node)
      *
      * @param head
      * @return
