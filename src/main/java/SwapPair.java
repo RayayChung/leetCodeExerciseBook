@@ -30,12 +30,12 @@ public class SwapPair {
         if (head == null || head.next == null) {
             return head;
         }
-        if (head.next.next == null) {
-            ListNode pointer = head.next;
-            pointer.next = head;
-            head.next = null;
-            return pointer;
-        }
+//        if (head.next.next == null) {
+//            ListNode pointer = head.next;
+//            pointer.next = head;
+//            head.next = null;
+//            return pointer;
+//        }
         ListNode swapPairs = swapPairs(head.next.next);
         ListNode pointer = head.next;
         pointer.next = head;
