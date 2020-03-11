@@ -99,6 +99,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[211]添加与搜索单词 - 数据结构设计.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[211]添加与搜索单词 - 数据结构设计.java" />
+              <option name="questionId" value="211" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[225]用队列实现栈.java">
           <value>
             <LeetcodeEditor>
@@ -179,6 +187,38 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[33]搜索旋转排序数组.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[33]搜索旋转排序数组.java" />
+              <option name="questionId" value="33" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[36]有效的数独.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[36]有效的数独.java" />
+              <option name="questionId" value="36" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[37]解数独.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[37]解数独.java" />
+              <option name="questionId" value="37" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[43]字符串相乘.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[43]字符串相乘.java" />
+              <option name="questionId" value="43" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[50]Pow(x, n).java">
           <value>
             <LeetcodeEditor>
@@ -192,6 +232,22 @@
             <LeetcodeEditor>
               <option name="path" value="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[51]N皇后.java" />
               <option name="questionId" value="51" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[68]文本左右对齐.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[68]文本左右对齐.java" />
+              <option name="questionId" value="68" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[69]x 的平方根.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="/var/folders/9y/cfjl017d7rg8wglqndlhqy9h0000gn/T/leetcode/editor/cn/[69]x 的平方根.java" />
+              <option name="questionId" value="69" />
             </LeetcodeEditor>
           </value>
         </entry>
