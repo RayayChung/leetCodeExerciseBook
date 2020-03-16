@@ -35,24 +35,35 @@
 
 public class SolveSudoku {
 
-    public  void solveSudoku(char[][] board) {
+    public static void solveSudoku(char[][] board) {
         if (board == null || board.length == 0) {
             return;
         }
-        solve(board);
+        int[][] row = new int[9][9];
+        int[][] col = new int[9][9];
+        int[][] boxes = new int[9][9];
+        prepareTheLimit(row, col, boxes, board);
+        solve(board, row, col, boxes);
     }
 
-    public  boolean solve(char[][] board) {
+    public static boolean solve(char[][] board, int[][] row, int[][] col, int[][] boxes) {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] == '.') {
-                    for (char c = '1'; c < '9'; c ++) {
-                        if (isValid(board, i, j, c)) {
+                    for (char c = '1'; c <= '9'; c++) {
+                        int convertValue = c - 49;
+                        if (isValid(i, j, convertValue, row, col, boxes)) {
                             board[i][j] = c;
-                            if (solve(board)) {
+                            row[i][convertValue] += 1;
+                            col[j][convertValue] += 1;
+                            boxes[getIndex(i, j)][convertValue] += 1;
+                            if (solve(board, row, col, boxes)) {
                                 return true;
                             }
                             board[i][j] = '.';
+                            row[i][convertValue] -= 1;
+                            col[j][convertValue] -= 1;
+                            boxes[getIndex(i, j)][convertValue] -= 1;
                         }
                     }
                     return false;
@@ -62,18 +73,45 @@ public class SolveSudoku {
         return true;
     }
 
-    private  boolean isValid(char[][] board, int row, int col, char c) {
-        for (int i = 0; i < 9; i++) {
-            if (board[i][col] != '.' && board[i][col] == 'c') return false;
-            if (board[row][i] != '.' && board[row][i] == 'c') return false;
-            if (board[3*(row/3) + i / 3][3 * (col/3) + i % 3] != '.' &&
-                    board[3*(row/3) + i / 3][3 * (col/3) + i % 3] == c) return false;
-        }
-        return true;
+    private static boolean isValid(int idxRow, int idxCol, int ch, int[][] row, int[][] col, int[][] boxes) {
+        return row[idxRow][ch] == 0 && col[idxCol][ch] == 0 && boxes[getIndex(idxRow, idxCol)][ch] == 0;
     }
 
-    public  void main(String[] args) {
-        char[][] arr ={{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
+    private static void prepareTheLimit(int[][] row, int[][] col, int[][] boxes, char[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                char ch = board[i][j];
+                if (ch != '.') {
+                    int convertValue = ch - 49;
+                    row[i][convertValue] += 1;
+                    col[j][convertValue] += 1;
+                    boxes[getIndex(i, j)][convertValue] += 1;
+                }
+            }
+        }
+    }
+
+    private static int getIndex(int i, int j) {
+        int p;
+        if (i >= 0 && i <= 2) {
+            p = 0;
+        } else if (i >= 3 && i <= 5) {
+            p = 1;
+        } else {
+            p = 2;
+        }
+
+        if (j >= 0 && j <= 2) {
+            return p;
+        } else if (j >= 3 && j <= 5) {
+            return p + 3;
+        } else {
+            return p + 6;
+        }
+    }
+
+    public static void main(String[] args) {
+        char[][] arr = {{'5', '3', '.', '.', '7', '.', '.', '.', '.'}, {'6', '.', '.', '1', '9', '5', '.', '.', '.'}, {'.', '9', '8', '.', '.', '.', '.', '6', '.'}, {'8', '.', '.', '.', '6', '.', '.', '.', '3'}, {'4', '.', '.', '8', '.', '3', '.', '.', '1'}, {'7', '.', '.', '.', '2', '.', '.', '.', '6'}, {'.', '6', '.', '.', '.', '.', '2', '8', '.'}, {'.', '.', '.', '4', '1', '9', '.', '.', '5'}, {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
         solveSudoku(arr);
         System.out.println("hahah");
     }
